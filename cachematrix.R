@@ -1,10 +1,37 @@
-## Put comments here that give an overall description of what your
-## functions do
+##  Jerome Cordjotse
+##  Programming Assignment 2
 
-## Write a short comment describing this function
+##  CACHING THE INVERSE OF A MATRIX                                                                             
+# Caching is storing data to make faster future requests 
+# The functions below help to work with cached matrix inverse to
+# prevent recomputation of inverse of the same matrix
+
+## makeCacheMatrix
+## This function creates a lists of setters and getters functions
+## to set and retrieve respectively the matrix and it's inverse
 
 makeCacheMatrix <- function(x = matrix()) {
-
+  ## s for the inverse variable
+    s <- NULL
+  
+  ## SETTERS: set values to global variables x, s
+    set <- function(y){
+        x <<- y     #Assignment to variable outside this() scope
+        s <<- NULL  #Reintiialisation to NULL when matrix changes 
+    }
+    setinverse <- function(inverse) i <<- inverse
+  
+  ## GETTERS: retrieve global variables x, i
+    get <- function() x
+    getinverse <- function() i
+  
+  # output of a list of functions of setter and getters above
+    list(
+      set = set, 
+      setinverse = setinverse,
+      get = get, 
+      getinverse = getinverse
+         )
 }
 
 
