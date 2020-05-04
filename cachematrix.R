@@ -6,6 +6,7 @@
 # The functions below help to work with cached matrix inverse to
 # prevent recomputation of inverse of the same matrix
 
+
 ## makeCacheMatrix
 ## This function creates a lists of setters and getters functions
 ## to set and retrieve respectively the matrix and it's inverse
@@ -13,7 +14,7 @@
 makeCacheMatrix <- function(x = matrix()) {
   ## i for the inverse variable
     i <- NULL
-  print(i)
+    
   ## SETTERS: set values to global variables x, i
     set <- function(y){
         x <<- y     #Assignment to variable outside this() scope
