@@ -11,13 +11,13 @@
 ## to set and retrieve respectively the matrix and it's inverse
 
 makeCacheMatrix <- function(x = matrix()) {
-  ## s for the inverse variable
-    s <- NULL
+  ## i for the inverse variable
+    i <- NULL
   
-  ## SETTERS: set values to global variables x, s
+  ## SETTERS: set values to global variables x, i
     set <- function(y){
         x <<- y     #Assignment to variable outside this() scope
-        s <<- NULL  #Reintiialisation to NULL when matrix changes 
+        i <<- NULL  #Reintiialisation to NULL when matrix changes 
     }
     setinverse <- function(inverse) i <<- inverse
   
@@ -35,8 +35,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve
+## This function modifies function solve() to return a cached variant if it exists
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+
 }
